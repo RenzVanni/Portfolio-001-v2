@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+p,
+a,
+button,
+label,
+input,
+textarea {
+  font-family: "Dekko", cursive;
+  src: url("./fonts/Dekko-Regular.ttf");
+  color: #ffffff;
+}
