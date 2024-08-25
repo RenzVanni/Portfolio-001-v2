@@ -1,6 +1,7 @@
 import data from "../data/home";
 import { Link } from "react-scroll";
 import { motion } from "framer-motion";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 const Home = () => {
   return (
@@ -86,9 +87,13 @@ const Home = () => {
             transition={{ duration: 0.5 }}
             className="max-w-[600px] max-h-[600px] rounded-full overflow-hidden"
           >
-            <img
+            {/* <img
               src={data?.image}
               alt="profile"
+              className="w-full h-full object-cover object-top"
+            /> */}
+            <LazyLoadImage
+              src={data?.image}
               className="w-full h-full object-cover object-top"
             />
           </motion.div>

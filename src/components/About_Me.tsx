@@ -1,5 +1,6 @@
 import data from "../data/about_me.json";
 import { motion } from "framer-motion";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 const About_Me = () => {
   return (
@@ -9,14 +10,29 @@ const About_Me = () => {
     >
       <div className="flex flex-1 justify-center lg:justify-start items-center h-full mb-12 lg:mb-0">
         <div className="bg-primary w-full h-full max-w-[500px]  min-h-[489px] max-h-[689px] p-2 rounded-xl relative ">
-          <motion.img
+          {/* <motion.img
             whileInView={{ top: "-8px", left: "-8px" }}
             style={{ top: 0, left: 0 }}
             transition={{ duration: 0.8 }}
             src={data[0]?.image}
             alt="profile"
             className="w-full h-full object-cover object-top rounded-xl absolute"
-          />
+          /> */}
+          <motion.div
+            whileInView={{ top: "-8px", left: "-8px" }}
+            style={{
+              top: 0,
+              left: 0,
+              position: "absolute",
+            }}
+            transition={{ duration: 0.5 }}
+            className="w-full h-full"
+          >
+            <LazyLoadImage
+              src={data[0].image}
+              className="w-full h-full rounded-xl object-cover shadow-2xl "
+            />
+          </motion.div>
         </div>
       </div>
       <motion.div className="flex flex-col flex-1 items-center lg:items-start justify-center h-full relative">

@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import data from "../data/capstone";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 const Capstone = () => {
   return (
@@ -33,19 +34,33 @@ const Capstone = () => {
             transition={{ duration: 0.5 }}
             className="w-[300px] h-[250px] md:w-[1200px] md:h-[600px] bg-primary rounded-xl relative"
           >
-            <motion.img
+            {/* <motion.img
               whileInView={{ top: "-8px", right: "8px" }}
               style={{
                 top: 0,
                 right: 0,
-
                 position: "absolute",
               }}
               transition={{ duration: 1 }}
               src={data?.hero}
               alt="image"
               className="w-full h-full object-center md:object-cover rounded-xl shadow-2xl"
-            />
+            /> */}
+            <motion.div
+              whileInView={{ top: "-8px", right: "8px" }}
+              style={{
+                top: 0,
+                right: 0,
+                position: "absolute",
+              }}
+              transition={{ duration: 0.5 }}
+              className="w-full h-full"
+            >
+              <LazyLoadImage
+                src={data?.hero}
+                className="w-full h-full rounded-xl md:object-cover shadow-2xl"
+              />
+            </motion.div>
           </motion.div>
         </div>
       </div>

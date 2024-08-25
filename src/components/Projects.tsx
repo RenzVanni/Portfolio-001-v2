@@ -2,6 +2,7 @@ import React from "react";
 import data from "../data/projects";
 import { motion } from "framer-motion";
 import { Projects_Prop, Project_Map_Prop } from "../types/projects_prop";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 const ProjectItem: React.FC<Project_Map_Prop> = (item, index) => {
   return (
@@ -23,7 +24,7 @@ const ProjectItem: React.FC<Project_Map_Prop> = (item, index) => {
         transition={{ duration: 0.5 }}
         className="bg-white h-[200px] w-[300px] sm:w-[400px] md:h-[350px] md:w-[550px] relative rounded-xl"
       >
-        <motion.img
+        <motion.div
           whileInView={{ top: "-8px", right: "8px" }}
           style={{
             top: 0,
@@ -31,10 +32,13 @@ const ProjectItem: React.FC<Project_Map_Prop> = (item, index) => {
             position: "absolute",
           }}
           transition={{ duration: 0.5 }}
-          src={item?.item?.hero}
-          alt="image"
-          className="w-full h-full rounded-xl object-cover shadow-2xl absolute "
-        />
+          className="w-full h-full"
+        >
+          <LazyLoadImage
+            src={item?.item?.hero}
+            className="w-full h-full rounded-xl object-cover shadow-2xl absolute "
+          />
+        </motion.div>
       </motion.div>
       <motion.div
         whileInView={{ x: 0 }}
