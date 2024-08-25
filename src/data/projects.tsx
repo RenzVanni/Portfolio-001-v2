@@ -1,12 +1,12 @@
 import { FaHtml5 } from "react-icons/fa";
 import { FaCss3Alt } from "react-icons/fa";
 import { RiJavascriptLine } from "react-icons/ri";
-import { TbBrandTypescript } from "react-icons/tb";
+// import { TbBrandTypescript } from "react-icons/tb";
 import { FaReact } from "react-icons/fa";
 import { FaNodeJs } from "react-icons/fa";
 import { SiExpress } from "react-icons/si";
 
-import { RiNotionFill } from "react-icons/ri";
+// import { RiNotionFill } from "react-icons/ri";
 
 import { FaGithub } from "react-icons/fa";
 import { IoLogoVercel } from "react-icons/io5";

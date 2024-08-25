@@ -1,6 +1,6 @@
-import React, { useEffect, useRef, useState } from "react";
+import React from "react";
 import data from "../data/projects";
-import { motion, MotionValue, useScroll, useTransform } from "framer-motion";
+import { motion } from "framer-motion";
 import { Projects_Prop, Project_Map_Prop } from "../types/projects_prop";
 
 const ProjectItem: React.FC<Project_Map_Prop> = (item, index) => {

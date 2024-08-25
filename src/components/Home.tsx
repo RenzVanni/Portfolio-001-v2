@@ -1,11 +1,8 @@
 import data from "../data/home";
 import { Link } from "react-scroll";
-import { RiNotionFill } from "react-icons/ri";
-import { motion, MotionValue, useScroll, useTransform } from "framer-motion";
-import { useRef } from "react";
+import { motion } from "framer-motion";
 
 const Home = () => {
-  const initialX = window.innerWidth < 400 ? 300 : 500;
   return (
     <div id="home" className="flex flex-col h-screen mb-16">
       <div className="flex justify-center gap-3 md:gap-7 py-6">
