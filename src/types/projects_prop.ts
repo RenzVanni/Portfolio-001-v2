@@ -2,7 +2,7 @@ export type Projects_Prop = {
   id: number;
   title: string;
   context: string;
-  disclaimer: string;
+  disclaimer?: string;
   hero: string; // Add the 'hero' property
   linksIcon: JSX.Element[]; // Assuming linksIcon is an array of React icons
   link: string[];

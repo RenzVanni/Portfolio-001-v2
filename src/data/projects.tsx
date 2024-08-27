@@ -1,12 +1,12 @@
 import { FaHtml5 } from "react-icons/fa";
 import { FaCss3Alt } from "react-icons/fa";
 import { RiJavascriptLine } from "react-icons/ri";
-// import { TbBrandTypescript } from "react-icons/tb";
+import { TbBrandTypescript } from "react-icons/tb";
 import { FaReact } from "react-icons/fa";
 import { FaNodeJs } from "react-icons/fa";
 import { SiExpress } from "react-icons/si";
-
-// import { RiNotionFill } from "react-icons/ri";
+import { RiNotionFill } from "react-icons/ri";
+import { RiTailwindCssFill } from "react-icons/ri";
 
 import { FaGithub } from "react-icons/fa";
 import { IoLogoVercel } from "react-icons/io5";
@@ -15,27 +15,27 @@ import { Projects_Prop } from "../types/projects_prop";
 const data: Projects_Prop[] = [
   {
     id: 1,
-    title: "Todo",
+    title: "Midnotes",
     context:
-      "Todo is a MERN stack application where in you can create, delete and filter your task. This also include a dark mode option for those who prefer dark than light interface.",
-    disclaimer:
-      "This project was from frontendmentor.io but the code was made by may self and not copy paste.",
-    hero: "/thumbnail/todo.png",
+      "Midnotes is a note taking web application inspired by Notion. Fun fact about the Midnotes aside from it look like the notion ui, the database that was used to build this application is the notion api.",
+    hero: "/thumbnail/todo-list-v2.png",
     linksIcon: [
       <FaGithub className="text-primary text-3xl cursor-pointer hover:scale-110" />,
       <IoLogoVercel className="text-primary text-3xl cursor-pointer hover:scale-110" />,
     ],
     link: [
-      "https://github.com/RenzVanni/todo-v2",
-      "https://todo-v2-client.vercel.app",
+      "https://github.com/RenzVanni/Todo-List-v2",
+      "https://todo-list-v2-dev.vercel.app/",
     ],
     techs: [
       <FaHtml5 className="text-primary text-3xl" />,
       <FaCss3Alt className="text-primary text-3xl" />,
-      <RiJavascriptLine className="text-primary text-3xl" />,
+      <RiTailwindCssFill className="text-primary text-3xl" />,
+      <TbBrandTypescript className="text-primary text-3xl" />,
       <FaReact className="text-primary text-3xl" />,
       <FaNodeJs className="text-primary text-3xl" />,
       <SiExpress className="text-primary text-3xl" />,
+      <RiNotionFill className="text-primary text-3xl" />,
     ],
   },
   {
