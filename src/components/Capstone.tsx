@@ -6,7 +6,7 @@ const Capstone = () => {
   return (
     <div
       id="capstone"
-      className="flex flex-col pb-14 lg:pb-28 items-center justify-start h-auto"
+      className="flex flex-col mb-14 lg:mb-32 items-center justify-start h-auto"
     >
       <p className="font-bold text-3xl text-center mb-12">{data?.title}</p>
       {data?.devs.map((item, index) => (
@@ -26,26 +26,23 @@ const Capstone = () => {
       <div className="w-full flex items-start justify-center ">
         <div className="w-full flex justify-center">
           <motion.div
-            whileInView={{ skewY: "-8deg", skewX: "-2deg" }}
+            whileInView={{ skewY: "-4deg", skewX: "-2deg", y: [0, -10, 0] }}
             style={{
               skewY: 0,
               skewX: 0,
+              y: 0,
             }}
-            transition={{ duration: 0.5 }}
-            className="w-[300px] h-[250px] md:w-[1200px] md:h-[600px] bg-primary rounded-xl relative"
+            transition={{
+              duration: 0.5,
+              y: {
+                duration: 2,
+                ease: "easeInOut",
+                repeat: Infinity,
+                repeatType: "reverse",
+              },
+            }}
+            className="w-[300px] h-[200px] md:w-[1200px] md:h-[600px] bg-primary rounded-xl relative"
           >
-            {/* <motion.img
-              whileInView={{ top: "-8px", right: "8px" }}
-              style={{
-                top: 0,
-                right: 0,
-                position: "absolute",
-              }}
-              transition={{ duration: 1 }}
-              src={data?.hero}
-              alt="image"
-              className="w-full h-full object-center md:object-cover rounded-xl shadow-2xl"
-            /> */}
             <motion.div
               whileInView={{ top: "-8px", right: "8px" }}
               style={{

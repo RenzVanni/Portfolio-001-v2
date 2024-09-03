@@ -15,14 +15,24 @@ const ProjectItem: React.FC<Project_Map_Prop> = (item, index) => {
       <motion.div
         whileInView={{
           skewX: item?.index % 2 === 0 ? "2deg" : "-2deg",
-          skewY: item?.index % 2 === 0 ? "8deg" : "-8deg",
+          skewY: item?.index % 2 === 0 ? "4deg" : "-4deg",
+          y: [0, -10, 0],
         }}
         style={{
           skewX: 0,
           skewY: 0,
+          y: 0,
         }}
-        transition={{ duration: 0.5 }}
-        className="bg-white h-[200px] w-[300px] sm:w-[400px] md:h-[350px] md:w-[550px] relative rounded-xl"
+        transition={{
+          duration: 0.5,
+          y: {
+            duration: 2,
+            ease: "easeInOut",
+            repeat: Infinity,
+            repeatType: "reverse",
+          },
+        }}
+        className="bg-white h-[200px] w-[300px] md:h-[350px] md:w-[550px] relative rounded-xl mb-4 lg:mb-0"
       >
         <motion.div
           whileInView={{ top: "-8px", right: "8px" }}
@@ -59,7 +69,7 @@ const ProjectItem: React.FC<Project_Map_Prop> = (item, index) => {
           <p>Link</p>
           <hr className="border border-primary h-[25px]" />
           {item?.item?.linksIcon?.map((link: any, index: number) => (
-            <a href={item?.item?.link[index]} target="_blank">
+            <a key={index} href={item?.item?.link[index]} target="_blank">
               {link}
             </a>
           ))}
@@ -70,10 +80,14 @@ const ProjectItem: React.FC<Project_Map_Prop> = (item, index) => {
 };
 const Projects = () => {
   return (
-    <div id="projects" className="flex flex-col gap-14 md:gap-8 mb-10">
+    <div id="projects" className="flex flex-col gap-8 mb-10">
       <p className="font-bold text-3xl text-center mb-12">Projects</p>
       {data?.map((item: Projects_Prop, index: number) => {
-        return <ProjectItem key={index} item={item} index={index} />;
+        return (
+          <React.Fragment key={index}>
+            <ProjectItem item={item} index={index} />;
+          </React.Fragment>
+        );
       })}
     </div>
   );

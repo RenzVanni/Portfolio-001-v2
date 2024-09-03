@@ -12,7 +12,7 @@ import { FaGithub } from "react-icons/fa";
 const data = {
   id: 1,
   name: "RENZ VANNI M. BATO",
-  image: "/images/profile-pic.png",
+  image: "/photo/grad-pic-1.jpeg",
   context:
     "I specialized in HTML, CSS, and React, I also know a little bit of MERN stack. My goal as frontend developer was to enhance what i currently know and in the future become a full stack developer.",
   repo: (
@@ -27,7 +27,7 @@ const data = {
     <TbBrandTypescript className="text-primary text-3xl" />,
     <FaReact className="text-primary text-3xl" />,
     <FaNodeJs className="text-primary text-3xl" />,
-    <SiExpress className="text-primary text-3xl"/>,
+    <SiExpress className="text-primary text-3xl" />,
     <RiNotionFill className="text-primary text-3xl" />,
   ],
 };

@@ -1,5 +1,6 @@
 import data from "../data/about_me.json";
 import { motion } from "framer-motion";
+import React from "react";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 
 const About_Me = () => {
@@ -35,19 +36,53 @@ const About_Me = () => {
           </motion.div>
         </div>
       </div>
-      <motion.div className="flex flex-col flex-1 items-center lg:items-start justify-center h-full relative">
+      <div className="flex flex-col flex-1 items-center lg:items-start justify-center h-full relative">
         <motion.p
           whileInView={{ x: 0 }}
-          style={{ x: 500 }}
+          style={{ x: 300 }}
           transition={{ duration: 0.5 }}
-          className="text-2xl font-bold mb-3 relative"
+          className="text-3xl font-bold mb-3 relative"
         >
           About Me
         </motion.p>
-        <p className="text-center lg:text-start max-w-[650px]">
+        <motion.p
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 1 }}
+          className="text-center text-sm lg:text-start max-w-[650px] mb-10"
+        >
           {data[0]?.context}
-        </p>
-      </motion.div>
+        </motion.p>
+        <motion.p
+          whileInView={{ x: 0 }}
+          style={{ x: 300 }}
+          transition={{ duration: 0.5 }}
+          className="font-semibold text-xl mb-3"
+        >
+          Work Experience
+        </motion.p>
+        <motion.div
+          whileInView={{ x: 0 }}
+          style={{ x: 300 }}
+          transition={{ duration: 0.5 }}
+          className="border-l-2 border-primary px-4"
+        >
+          <div className="flex justify-start items-center w-full gap-4 mb-3">
+            <div className=" h-10 w-10 rounded-full">
+              <img
+                src="./images/prosperna-logo.png"
+                alt="image"
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <div>
+              <p className="text-lg">Frontend Developer Intern</p>
+              <p className="text-md">Prosperna</p>
+            </div>
+          </div>
+          <p className="text-sm">February 2024 - May 2024</p>
+        </motion.div>
+      </div>
     </div>
   );
 };

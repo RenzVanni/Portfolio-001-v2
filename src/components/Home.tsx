@@ -1,53 +1,12 @@
 import data from "../data/home";
-import { Link } from "react-scroll";
 import { motion } from "framer-motion";
 import { LazyLoadImage } from "react-lazy-load-image-component";
+import Menu from "./Menu";
 
 const Home = () => {
   return (
-    <div id="home" className="flex flex-col h-screen mb-16">
-      <div className="flex justify-center gap-3 md:gap-7 py-6">
-        <Link
-          to="home"
-          smooth={true}
-          duration={500}
-          className="cursor-pointer text-sm hover:scale-110"
-        >
-          Home
-        </Link>
-        <Link
-          to="about"
-          smooth={true}
-          duration={500}
-          className="cursor-pointer text-sm hover:scale-110"
-        >
-          About
-        </Link>
-        <Link
-          to="capstone"
-          smooth={true}
-          duration={500}
-          className="cursor-pointer text-sm hover:scale-110"
-        >
-          Capstone
-        </Link>
-        <Link
-          to="projects"
-          smooth={true}
-          duration={500}
-          className="cursor-pointer text-sm hover:scale-110"
-        >
-          Projects
-        </Link>
-        <Link
-          to="contact"
-          smooth={true}
-          duration={500}
-          className="cursor-pointer text-sm hover:scale-110"
-        >
-          Contact
-        </Link>
-      </div>
+    <div id="home" className="flex flex-col h-screen mb-20">
+      <Menu />
 
       <div className="flex flex-col md:flex-row flex-1 overflow-hidden">
         <div className="flex flex-1 flex-col h-full ">

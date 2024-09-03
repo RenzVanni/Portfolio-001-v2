@@ -7,6 +7,7 @@ import { FaNodeJs } from "react-icons/fa";
 import { SiExpress } from "react-icons/si";
 import { RiNotionFill } from "react-icons/ri";
 import { RiTailwindCssFill } from "react-icons/ri";
+import { BiLogoMongodb } from "react-icons/bi";
 
 import { FaGithub } from "react-icons/fa";
 import { IoLogoVercel } from "react-icons/io5";
@@ -40,6 +41,30 @@ const data: Projects_Prop[] = [
   },
   {
     id: 2,
+    title: "Todos",
+    context:
+      "Todo is a MERN stack application where in you can create, delete and filter your task. This also include a dark mode option for those who prefer dark than light interface.",
+    hero: "/thumbnail/todo.png",
+    linksIcon: [
+      <FaGithub className="text-primary text-3xl cursor-pointer hover:scale-110" />,
+      <IoLogoVercel className="text-primary text-3xl cursor-pointer hover:scale-110" />,
+    ],
+    link: [
+      "https://github.com/RenzVanni/todo-v2",
+      "https://todo-v2-client.vercel.app/",
+    ],
+    techs: [
+      <FaHtml5 className="text-primary text-3xl" />,
+      <FaCss3Alt className="text-primary text-3xl" />,
+      <RiJavascriptLine className="text-primary text-3xl" />,
+      <FaReact className="text-primary text-3xl" />,
+      <FaNodeJs className="text-primary text-3xl" />,
+      <SiExpress className="text-primary text-3xl" />,
+      <BiLogoMongodb className="text-primary text-3xl" />,
+    ],
+  },
+  {
+    id: 3,
     title: "Space tourism multi-page website",
     context:
       "Let's face it, if you want to go to space, you might as well genuinely go to outer space and not hover kind of on the edge of it. Well sit back, and relax because we'll give you a truly out of this world experience!",
@@ -62,7 +87,7 @@ const data: Projects_Prop[] = [
     ],
   },
   {
-    id: 3,
+    id: 4,
     title: "Comment Section",
     context:
       "Comment section is a project that put my JavaScript skills to the test, by using JSON file to pull the data.",
@@ -85,7 +110,7 @@ const data: Projects_Prop[] = [
     ],
   },
   {
-    id: 4,
+    id: 5,
     title: "Job Listing",
     context:
       "Job listing is a project that showcase my JavaScript skills by filtering the jobs based on the selected categories.",
@@ -108,7 +133,7 @@ const data: Projects_Prop[] = [
     ],
   },
   {
-    id: 5,
+    id: 6,
     title: "Tip Calculator",
     context:
       "Tip calculator is a small project showcasing my JavaScript skills in making calculator functionality.",
@@ -130,7 +155,7 @@ const data: Projects_Prop[] = [
     ],
   },
   {
-    id: 6,
+    id: 7,
     title: "Testimonials Slider",
     context:
       "Testimonial slider is a simple project, using JavaScript it enable switching slides.",
@@ -152,7 +177,7 @@ const data: Projects_Prop[] = [
     ],
   },
   {
-    id: 7,
+    id: 8,
     title: "Advice Generator",
     context:
       "Advice generator is my first project involved in API. This uses the Advice Slip API to generate random quotes of advice.",
