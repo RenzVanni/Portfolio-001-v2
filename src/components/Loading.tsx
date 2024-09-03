@@ -1,5 +1,3 @@
-import React from "react";
-
 const Loading = () => {
   return (
     <div className="bg-background flex flex-1 h-screen items-center justify-center">

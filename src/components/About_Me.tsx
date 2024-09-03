@@ -1,6 +1,5 @@
 import data from "../data/about_me.json";
 import { motion } from "framer-motion";
-import React from "react";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 
 const About_Me = () => {
