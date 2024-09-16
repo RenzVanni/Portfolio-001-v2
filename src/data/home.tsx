@@ -1,5 +1,6 @@
 import { FaHtml5 } from "react-icons/fa";
 import { FaCss3Alt } from "react-icons/fa";
+import { RiTailwindCssFill } from "react-icons/ri";
 import { RiJavascriptLine } from "react-icons/ri";
 import { TbBrandTypescript } from "react-icons/tb";
 import { FaReact } from "react-icons/fa";
@@ -23,6 +24,7 @@ const data = {
   tech: [
     <FaHtml5 className="text-primary text-3xl" />,
     <FaCss3Alt className="text-primary text-3xl" />,
+    <RiTailwindCssFill className="text-primary text-3xl" />,
     <RiJavascriptLine className="text-primary text-3xl" />,
     <TbBrandTypescript className="text-primary text-3xl" />,
     <FaReact className="text-primary text-3xl" />,

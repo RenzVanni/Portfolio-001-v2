@@ -8,7 +8,7 @@ const Menu = () => {
 
   return (
     <>
-      <div className="hidden md:flex justify-center gap-3 md:gap-7 py-6">
+      <div className="hidden md:flex justify-center gap-3 md:gap-7 py-6 fixed top-0 left-0 w-full bg-background z-10">
         <Link
           to="home"
           smooth={true}
